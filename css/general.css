@@ -1,0 +1,15 @@
+#blog {
+	
+}
+
+#footer {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+h1 a, h1 a:hover{
+    color: #333;
+
+    text-decoration: none;
+}
+

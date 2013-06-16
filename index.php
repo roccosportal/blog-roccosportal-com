@@ -4,19 +4,22 @@
     
     // set up path mapper
     require './Library/Pvik/Core/Path.php';
-    \Pvik\Core\Path::Init();
+    \Pvik\Core\Path::init();
     
     // set up class loader
-    require \Pvik\Core\Path::RealPath('~/Library/Pvik/Core/ClassLoader.php');
-    $ClassLoader = new \Pvik\Core\ClassLoader();
-    $ClassLoader->SetNamespaceAssociation('\\Pvik', '~/Library/Pvik/');
-    $ClassLoader->SetNamespaceAssociation('\\MyProject', '~/Application/');
-    $ClassLoader->Init();
-    
-    //require_once ("./library/pvik/core/core.php");
-    $Core = new \Pvik\Core\Core();
-    $Core->LoadConfig(array(
+    require \Pvik\Core\Path::realPath('~/Library/Pvik/Core/ClassLoader.php');
+    $classLoader = new \Pvik\Core\ClassLoader();
+    $classLoader->setNamespaceAssociation('\\Pvik', '~/Library/Pvik/');
+    $classLoader->setNamespaceAssociation('\\Blog', '~/Application/');
+    $classLoader->setNamespaceAssociation('\\PvikAdminTools', '~/Library/PvikAdminTools');
+    $classLoader->init();
+
+    $core = new \Pvik\Core\Core();
+    $core->loadConfig(array(
 			'~/Application/Configs/DefaultConfig.php',
-			'~/Application/Configs/Config.php')
+			'~/Application/Configs/Config.php',
+                        '~/Application/Configs/PvikAdminTools.php',
+                        '~/Library/PvikAdminTools/Configs/Configure.php'
+                        )
 			);
-    $Core->StartWeb();
+    $core->startWeb();
