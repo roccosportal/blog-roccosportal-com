@@ -1,7 +1,14 @@
 <?php $this->useMasterPage('~/Application/Views/MasterPages/Master.php'); ?>
 <?php $post = $this->viewData->get('post') ?>
 <?php $this->startContent('Content'); ?>
-    <div class="span7 blog-entry">
+<hr /> 
+<div class="row blog-row">
+    <div class="span3">
+        <a href="<?php echo Pvik\Core\Path::relativePath('~/' . $post->uniqueName . '/') ?>">
+            <img src="<?php echo Pvik\Core\Path::relativePath('~/img/posts/' . $post->postId.'/thumbnail.png') ?>" alt="image">
+        </a>
+    </div>
+    <div class="span9">   
         <h3><?php echo $post->title ?></h3>
         <p>
             <small><?php echo $post->getConvertedCreated() ?></small>
@@ -21,8 +28,8 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-
+  </div>
+</div>
 <?php $this->endContent(); ?>
 <?php $this->startContent('JS'); ?>
 <?php $this->endContent(); ?>

@@ -1,11 +1,41 @@
-#blog {
-	
+body {
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+	line-height: 26px;
 }
+
+hr {
+	margin-top: 10px;
+}
+
+.page-header {
+	margin-bottom: 0px; /* instead of 30px */
+}
+
+#contact {
+	color: #999999;
+}
+
+#about {
+	margin-top: 30px;
+	text-align: center;
+}
+
+
+div.blog-row{
+	margin-bottom: 24px;
+}
+
+div.blog-row img{
+	margin-top: 10px;
+}
+
 
 #footer {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
+
 
 h1 a, h1 a:hover{
     color: #333;
