@@ -24,7 +24,7 @@
                         Nothing to see here. Scroll down.
                     </p>
                     <p>
-                        <small>You may want to follow <a href="roccosportal.com">this link</a> to enter my frontpage.</small>
+                        <small>You may want to follow <a href="http://roccosportal.com">this link</a> to enter my frontpage.</small>
                     </p>
                  </div>
             </div>
